@@ -1,34 +1,47 @@
 {
-  "name": "buildfire-sdk",
-  "version": "0.0.13",
-  "description": "Software Development Kit for developing plugins for the BuildFire mobile app building platform",
+  "name": "BuildFireSDK",
+  "version": "1.0.0",
+  "description": "This SDK helps in building BuildFire Plugins",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install",
+    "fnTest": "node test/server.js",
+    "test": ".\\node_modules\\.bin\\karma start karma.conf.js"
+  },
+  "dependencies": {
+    "archiver": "^2.0.0",
+    "bower": "^1.7.6",
+    "prompt": "^1.0.0",
+    "semver": "^5.3.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BuildFire/sdk-cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/buildfire/sdk/issues"
-  },
-  "homepage": "https://github.com/buildfire/sdk-cli",
-  "dependencies": {
-    "adm-zip": "0.4.*",
-    "ncp": "2.0.*",
-    "async":"1.5.0",
-    "phantomjs": "2.1.1",
-    "phantom": "1.0.0"
-  },
-  "bin": {
-    "buildfire": "./bin.js"
+    "url": "https:/github.com/BuildFire/sdk.git"
   },
   "keywords": [
-    "buildfire",
-    "buildfirejs",
-    "buildfirecli",
-    "sdk",
-    "mobile",
-    "plugin",
-    "cli"
+    "BuildFire",
+    "Plugins"
   ],
   "author": "Daniel Hindi",
-  "license": "MIT"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chai": "^0.1.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-coverage": "^0.5.1",
+    "karma-junit-reporter": "^0.3.3",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "mocha": "^2.2.5",
+    "karma-mocha": "^0.2.0",
+    "phantomjs": "^1.9.17",
+    "express": "4.0.0",
+    "body-parser": "1.11.0",
+    "phantom": "0.8.4"
+  }
 }
